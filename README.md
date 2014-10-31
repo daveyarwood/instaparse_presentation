@@ -1,4 +1,4 @@
-In October 2014 I gave a talk about Instaparse at the monthly TriClojure meetup.
+In October 2014 I gave a talk about Instaparse at the monthly [TriClojure](http://www.meetup.com/TriClojure) meetup.
 
 Here are some examples of parsers built using Instaparse, that I used for my talk.
 
