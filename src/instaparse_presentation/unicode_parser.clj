@@ -1,7 +1,12 @@
 (ns instaparse-presentation.unicode-parser
   (:require [instaparse.core :as insta]))
 
-(defn parse-unicode-chars [number-string]
+(defn parse-unicode-chars
+  "Parses a string of consecutive digits into all possible groupings of
+   numbers from 32-65535, representing Unicode code points in the Basic
+   Multilingual Plane. Returns the results as strings of Unicode 
+   characters."
+  [number-string]
   (->> number-string
        (insta/parses (insta/parser "
          string         = character+

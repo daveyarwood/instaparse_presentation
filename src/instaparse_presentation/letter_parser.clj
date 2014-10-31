@@ -1,7 +1,11 @@
 (ns instaparse-presentation.letter-parser
   (:require [instaparse.core :as insta]))
 
-(defn parse-letters [number-string]
+(defn parse-letters 
+  "Parses a string of consecutive digits into possible groupings of
+   numbers from 1-26. Returns the result as a list of possible result
+   strings, with the numbers 1-26 mapped to the letters a-z."
+  [number-string]
   (->> number-string
        (insta/parses (insta/parser 
                        "string = letter+
